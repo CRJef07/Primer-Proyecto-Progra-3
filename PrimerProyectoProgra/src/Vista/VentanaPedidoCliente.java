@@ -15,8 +15,6 @@ import javax.swing.JTable;
 import Clases.Pedido;
 import Clases.Cliente;
 import Clases.ConjuntoMesas;
-import Vista.VentanaMenu;
-import Vista.VentanaMenuLlevar;
 
 public class VentanaPedidoCliente extends JFrame {
 
@@ -65,7 +63,7 @@ public class VentanaPedidoCliente extends JFrame {
         panel_boton.add(regresar);
 
         regresar.addActionListener((e) -> {
-            VentanaMenuLlevar vista = new VentanaMenuLlevar(clientes, clientesExpress,meseros);
+            VentanaMenuLlevar vista = new VentanaMenuLlevar(clientes, clientesExpress, meseros);
             vista.setPedidos(pedidos);
             vista.init(nombre, telefono, mesas);
 

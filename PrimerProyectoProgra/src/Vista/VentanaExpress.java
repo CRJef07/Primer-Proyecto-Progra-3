@@ -19,11 +19,11 @@ public class VentanaExpress extends JFrame {
     private final ArrayList<String> meseros;
     private JButton btnVerPedidos, btnAgregar, btnRegresar;
 
-    public VentanaExpress(ArrayList<Cliente> clientes, ArrayList<Cliente> clientesExpress,ArrayList<String> meseros) {
+    public VentanaExpress(ArrayList<Cliente> clientes, ArrayList<Cliente> clientesExpress, ArrayList<String> meseros) {
         super("Ventana Express");
         this.clientes = clientes;
         this.clientesExpress = clientesExpress;
-        this.meseros=meseros;
+        this.meseros = meseros;
     }
 
     public void iniciar(ConjuntoMesas mesas) {
@@ -44,7 +44,7 @@ public class VentanaExpress extends JFrame {
         btnRegresar = new JButton("Regresar");
 
         btnVerPedidos.addActionListener((e) -> {
-            VentanaPedidosExpress vista = new VentanaPedidosExpress(clientes, clientesExpress,meseros);
+            VentanaPedidosExpress vista = new VentanaPedidosExpress(clientes, clientesExpress, meseros);
             vista.iniciar(mesas);
             setVisible(false);
         });
@@ -55,14 +55,14 @@ public class VentanaExpress extends JFrame {
             String telefono = JOptionPane.showInputDialog("Ingrese el telefono");
 
             if ((nombre != null && telefono != null && direccion != null) && (!nombre.equals("") && !telefono.equals("") && !direccion.equals(""))) {
-                VentanaMenuExpress menu = new VentanaMenuExpress(clientes, clientesExpress,meseros);
+                VentanaMenuExpress menu = new VentanaMenuExpress(clientes, clientesExpress, meseros);
                 menu.iniciar(nombre, direccion, telefono, mesas);
                 setVisible(false);
             }
         });
 
         btnRegresar.addActionListener((e) -> {
-            VentanaTipoPedido vista = new VentanaTipoPedido(clientes, clientesExpress,meseros);
+            VentanaTipoPedido vista = new VentanaTipoPedido(clientes, clientesExpress, meseros);
             vista.init(mesas);
             setVisible(false);
         });

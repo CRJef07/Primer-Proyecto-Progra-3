@@ -21,7 +21,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import Clases.Factura;
 import Clases.Pedido;
-import Vista.VentanaMesa;
 
 public class VentanaFacturaLlevar extends JFrame {
 
@@ -31,12 +30,12 @@ public class VentanaFacturaLlevar extends JFrame {
     private ArrayList<String> meseros;
     private final Factura factura;
 
-    public VentanaFacturaLlevar(Factura factura, ArrayList<Cliente> clientes, ArrayList<Cliente> clientesExpress,ArrayList<String> meseros) {
+    public VentanaFacturaLlevar(Factura factura, ArrayList<Cliente> clientes, ArrayList<Cliente> clientesExpress, ArrayList<String> meseros) {
         super("Factura para llevar ");
         this.factura = factura;
         this.clientes = clientes;
         this.clientesExpress = clientesExpress;
-        this.meseros=meseros;
+        this.meseros = meseros;
     }
 
     public void init(ConjuntoMesas mesas) {
@@ -105,7 +104,7 @@ public class VentanaFacturaLlevar extends JFrame {
         imagen.setIcon(imagen_icono);
 
         regresar.addActionListener((e) -> {
-            VentanaPedidosLlevar vista = new VentanaPedidosLlevar(clientes, clientesExpress,meseros);
+            VentanaPedidosLlevar vista = new VentanaPedidosLlevar(clientes, clientesExpress, meseros);
             vista.init(mesas);
             setVisible(false);
         });

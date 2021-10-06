@@ -15,7 +15,6 @@ import javax.swing.JTable;
 import Clases.Pedido;
 import Clases.Cliente;
 import Clases.ConjuntoMesas;
-import Vista.VentanaMenu;
 
 public class VentanaPedidos extends JFrame {
 
@@ -33,7 +32,7 @@ public class VentanaPedidos extends JFrame {
         regresar = new JButton("Regresar");
         this.clientes = clientes;
         this.clientesExpress = clientesExpress;
-        this.meseros=meseros;
+        this.meseros = meseros;
     }
 
     public void init(ConjuntoMesas mesas, String ventana) {
@@ -76,12 +75,12 @@ public class VentanaPedidos extends JFrame {
 
         regresar.addActionListener((e) -> {
             if (ventana.equals("Menu")) {
-                VentanaMenu vista = new VentanaMenu(clientes, clientesExpress,meseros);
+                VentanaMenu vista = new VentanaMenu(clientes, clientesExpress, meseros);
                 vista.setPedidos(pedidos);
                 vista.setMesa(numero_mesa);
                 vista.init(mesas);
             } else if (ventana.equals("Mesa")) {
-                VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(numero_mesa), "Mesa " + (numero_mesa + 1), clientes, clientesExpress,meseros);
+                VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(numero_mesa), "Mesa " + (numero_mesa + 1), clientes, clientesExpress, meseros);
                 vista.init(mesas);
             }
             setVisible(false);

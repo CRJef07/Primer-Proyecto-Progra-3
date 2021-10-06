@@ -55,10 +55,10 @@ public class VentanaConjuntoMesas extends JFrame {
 
         for (int i = 0; i < mesas.getCantidad_de_mesas(); i++) {
             JButton boton = new JButton();
-            boton.setText((i+1)+"");
+            boton.setText((i + 1) + "");
             if (mesas.getMesas().get(i).isDisponible() == true) {
                 boton.setIcon(icono_disponible);
-                
+
             } else {
                 boton.setIcon(icono_ocupado);
             }
@@ -138,7 +138,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                   if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;
@@ -182,7 +182,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                   if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;
@@ -314,7 +314,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                   if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;
@@ -446,7 +446,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                 if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;
@@ -490,7 +490,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                  if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;
@@ -534,7 +534,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                  if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;
@@ -578,7 +578,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                   if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;
@@ -666,7 +666,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                 if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;
@@ -710,7 +710,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                 if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;
@@ -798,7 +798,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                  if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;
@@ -842,7 +842,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                   if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;
@@ -886,7 +886,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                  if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;
@@ -930,7 +930,7 @@ public class VentanaConjuntoMesas extends JFrame {
                         }
                     }
                     boolean meseroValido = false;
-                   if (mesero != null) {
+                    if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
                             if (meseros.get(i).toLowerCase().equals(mesero.toLowerCase())) {
                                 meseroValido = true;

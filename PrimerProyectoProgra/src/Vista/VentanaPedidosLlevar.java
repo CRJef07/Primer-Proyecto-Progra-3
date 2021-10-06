@@ -10,8 +10,6 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import Clases.Factura;
-import Clases.Pedido;
-import Vista.VentanaFactura;
 import Clases.Cliente;
 import Clases.ConjuntoMesas;
 import java.awt.Insets;
@@ -30,7 +28,7 @@ public class VentanaPedidosLlevar extends JFrame {
         super("Pedidos para llevar");
         this.clientes = clientes;
         this.clientesExpress = clientesExpress;
-        this.meseros=meseros;
+        this.meseros = meseros;
     }
 
     public void init(ConjuntoMesas mesas) {
@@ -54,7 +52,7 @@ public class VentanaPedidosLlevar extends JFrame {
 
         regresar = new JButton("Regresar");
         regresar.addActionListener((e) -> {
-            VentanaLlevar ventana = new VentanaLlevar(clientes, clientesExpress,meseros);
+            VentanaLlevar ventana = new VentanaLlevar(clientes, clientesExpress, meseros);
             ventana.init(mesas);
             setVisible(false);
         });
@@ -70,7 +68,7 @@ public class VentanaPedidosLlevar extends JFrame {
                 int fila = tabla.getSelectedRow();
                 if (fila != -1) {
                     Factura factura = new Factura(clientes.get(fila).getNombre(), "Llevar", "Ventanilla", fila, fecha, clientes.get(fila).getPedidos());
-                    VentanaFacturaLlevar vista = new VentanaFacturaLlevar(factura, clientes, clientesExpress,meseros);
+                    VentanaFacturaLlevar vista = new VentanaFacturaLlevar(factura, clientes, clientesExpress, meseros);
                     vista.init(mesas);
                     setVisible(false);
                 }

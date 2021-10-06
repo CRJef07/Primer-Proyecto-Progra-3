@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Vista;
 
 import Clases.Cliente;
 import Clases.ConjuntoMesas;
-import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.GridBagConstraints;
 
@@ -19,12 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.ListModel;
 
-/**
- *
- * @author hilla
- */
 public class VentanaAdministracion extends JFrame {
 
     private JButton btnAgregarMeseros, btnEliminarMeseros, btnVerMeseros, btnRegresar;
@@ -33,6 +22,7 @@ public class VentanaAdministracion extends JFrame {
     private ArrayList<String> meseros;
 
     public VentanaAdministracion(ArrayList<Cliente> clientes, ArrayList<Cliente> clientesExpress, ArrayList<String> meseros) {
+        super("Ventana del Administrador");
         btnAgregarMeseros = new JButton("Agregar meseros");
         btnEliminarMeseros = new JButton(" Eliminar meseros");
         btnVerMeseros = new JButton("Ver meseros");
@@ -69,9 +59,9 @@ public class VentanaAdministracion extends JFrame {
         btnVerMeseros.addActionListener((e) -> {
             JList listaMeseros = new JList(meseros.toArray());
             listaMeseros.setEnabled(false);
-            if(!meseros.isEmpty()){
-                  JOptionPane.showMessageDialog(null, listaMeseros);
-            }else{
+            if (!meseros.isEmpty()) {
+                JOptionPane.showMessageDialog(null, listaMeseros);
+            } else {
                 JOptionPane.showMessageDialog(null, "No hay meseros registrados");
             }
 
@@ -81,12 +71,11 @@ public class VentanaAdministracion extends JFrame {
             res.init(mesas);
             setVisible(false);
         });
-        gbc.insets = new Insets(15, 15, 15, 15);
 
+        gbc.insets = new Insets(15, 15, 15, 15);
         gbc.gridx = 0;
         gbc.gridy = 0;
         mainPanel.add(btnAgregarMeseros, gbc);
-
         gbc.gridx = 0;
         gbc.gridy = 1;
         mainPanel.add(btnEliminarMeseros, gbc);
@@ -99,7 +88,7 @@ public class VentanaAdministracion extends JFrame {
         gbc.gridy = 3;
         mainPanel.add(btnRegresar, gbc);
 
-        c.add(mainPanel, BorderLayout.NORTH);
+        c.add(mainPanel);
     }
 
     public void init(ConjuntoMesas mesas) {

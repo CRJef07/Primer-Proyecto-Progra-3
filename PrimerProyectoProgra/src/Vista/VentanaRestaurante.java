@@ -29,7 +29,7 @@ public class VentanaRestaurante extends JFrame {
         nombreRestaurante = new JLabel("Restaurante uwu");
         this.clientes = clientes;
         this.clientesExpress = clientesExpress;
-        this.meseros=meseros;
+        this.meseros = meseros;
     }
 
     public void ajustarComponentes(Container c, ConjuntoMesas mesas) {
@@ -51,12 +51,12 @@ public class VentanaRestaurante extends JFrame {
         c.add(pnlPrincipal);
 
         btnMesero.addActionListener((e) -> {
-            VentanaTipoPedido vista = new VentanaTipoPedido(clientes, clientesExpress,meseros);
+            VentanaTipoPedido vista = new VentanaTipoPedido(clientes, clientesExpress, meseros);
             vista.init(mesas);
             setVisible(false);
         });
         btnAdmi.addActionListener((e) -> {
-            VentanaAdministracion admi=new VentanaAdministracion(clientes,clientesExpress,meseros);
+            VentanaAdministracion admi = new VentanaAdministracion(clientes, clientesExpress, meseros);
             admi.init(mesas);
             setVisible(false);
         });

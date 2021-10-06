@@ -1,17 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Clases;
 
 import java.util.ArrayList;
-import Clases.Pedido;
 
-/**
- *
- * @author hilla
- */
 public class Cliente {
 
     private ArrayList<Pedido> pedidos;
@@ -21,7 +11,7 @@ public class Cliente {
         this.nombre = nombre;
         this.numero = numero;
         this.direccion = direccion;
-        this.pedidos=pedidos;
+        this.pedidos = pedidos;
     }
 
     public void setPedidos(ArrayList<Pedido> pedidos) {
@@ -55,4 +45,4 @@ public class Cliente {
     public String getNumero() {
         return numero;
     }
-    }
+}

@@ -15,8 +15,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import Clases.Pedido;
-import Vista.VentanaPedidoCliente;
-import Vista.VentanaPedidos;
 import Clases.Platillo;
 import Clases.Cliente;
 import Clases.ConjuntoMesas;
@@ -36,7 +34,7 @@ public class VentanaMenuLlevar extends JFrame {
         this.clientes = clientes;
         pedidos = new ArrayList();
         this.clientesExpress = clientesExpress;
-        this.meseros=meseros;
+        this.meseros = meseros;
         aceptado = false;
     }
 
@@ -161,14 +159,13 @@ public class VentanaMenuLlevar extends JFrame {
                 }
             }
         });*/
-        
         btn_ver_pedidos.addActionListener((e) -> {
             if (aceptado == false) {
                 JOptionPane.showMessageDialog(null, "No hay pedidos", "No ha agregado ninguna orden", JOptionPane.ERROR_MESSAGE);
             }
             for (int i = 0; i < clientes.size(); i++) {
                 if (clientes.get(i).getNombre().equals(nombre)) {
-                    VentanaPedidoCliente vista = new VentanaPedidoCliente(clientes.get(i).getPedidos(), clientes, clientesExpress,meseros);
+                    VentanaPedidoCliente vista = new VentanaPedidoCliente(clientes.get(i).getPedidos(), clientes, clientesExpress, meseros);
                     vista.init(nombre, telefono, "llevar", mesas);
                     setVisible(false);
                 }
@@ -186,7 +183,7 @@ public class VentanaMenuLlevar extends JFrame {
         });
 
         regresar.addActionListener((e) -> {
-            VentanaLlevar ventana = new VentanaLlevar(clientes, clientesExpress,meseros);
+            VentanaLlevar ventana = new VentanaLlevar(clientes, clientesExpress, meseros);
             ventana.init(mesas);
             setVisible(false);
         });

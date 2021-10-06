@@ -30,13 +30,13 @@ public class VentanaFactura extends JFrame {
     private final Factura factura;
     private final int numero_mesa;
 
-    public VentanaFactura(Factura factura, int numero_mesa, ArrayList<Cliente> clientes, ArrayList<Cliente> clientesExpress,ArrayList<String> meseros) {
-        super("Factura Mesa " + (numero_mesa+1));
+    public VentanaFactura(Factura factura, int numero_mesa, ArrayList<Cliente> clientes, ArrayList<Cliente> clientesExpress, ArrayList<String> meseros) {
+        super("Factura Mesa " + (numero_mesa + 1));
         this.factura = factura;
         this.numero_mesa = numero_mesa;
         this.clientes = clientes;
         this.clientesExpress = clientesExpress;
-        this.meseros=meseros;
+        this.meseros = meseros;
     }
 
     public void init(ConjuntoMesas mesas, String ventana) {
@@ -106,7 +106,7 @@ public class VentanaFactura extends JFrame {
 
         regresar.addActionListener((e) -> {
             if (ventana.equals("Mesa")) {
-                VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(numero_mesa), "Mesa " + (numero_mesa + 1), clientes, clientesExpress,meseros);
+                VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(numero_mesa), "Mesa " + (numero_mesa + 1), clientes, clientesExpress, meseros);
                 vista.init(mesas);
             }
             setVisible(false);

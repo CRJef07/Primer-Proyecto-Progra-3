@@ -12,7 +12,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.awt.Insets;
-import Vista.VentanaPedidos;
 import java.util.ArrayList;
 import Clases.Pedido;
 import Clases.Platillo;
@@ -35,7 +34,7 @@ public class VentanaMenu extends JFrame {
         pedidos = new ArrayList();
         this.clientes = clientes;
         this.clientesExpress = clientesExpress;
-        this.meseros=meseros;
+        this.meseros = meseros;
     }
 
     public void init(ConjuntoMesas mesas) {
@@ -153,7 +152,7 @@ public class VentanaMenu extends JFrame {
         });
 
         btn_ver_pedidos.addActionListener((e) -> {
-            VentanaPedidos vista = new VentanaPedidos(pedidos, numero_mesa, clientes, clientesExpress,meseros);
+            VentanaPedidos vista = new VentanaPedidos(pedidos, numero_mesa, clientes, clientesExpress, meseros);
             vista.init(mesas, "Menu");
             setVisible(false);
         });
@@ -167,7 +166,7 @@ public class VentanaMenu extends JFrame {
         });
 
         regresar.addActionListener((e) -> {
-            VentanaConjuntoMesas vista = new VentanaConjuntoMesas(mesas, clientes, clientesExpress,meseros);
+            VentanaConjuntoMesas vista = new VentanaConjuntoMesas(mesas, clientes, clientesExpress, meseros);
             vista.init();
             setVisible(false);
         });

@@ -24,11 +24,11 @@ public class VentanaPedidosExpress extends JFrame {
     private ArrayList<String> meseros;
     private JButton btnRegresar, btnMostrarCliente;
 
-    public VentanaPedidosExpress(ArrayList<Cliente> clientes, ArrayList<Cliente> clientesExpress,ArrayList<String> meseros) {
+    public VentanaPedidosExpress(ArrayList<Cliente> clientes, ArrayList<Cliente> clientesExpress, ArrayList<String> meseros) {
         super("Pedidos Express");
         this.clientes = clientes;
         this.clientesExpress = clientesExpress;
-        this.meseros=meseros;
+        this.meseros = meseros;
     }
 
     public void iniciar(ConjuntoMesas mesas) {
@@ -58,7 +58,7 @@ public class VentanaPedidosExpress extends JFrame {
         scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
         btnRegresar.addActionListener((e) -> {
-            VentanaExpress ventana = new VentanaExpress(clientes, clientesExpress,meseros);
+            VentanaExpress ventana = new VentanaExpress(clientes, clientesExpress, meseros);
             ventana.iniciar(mesas);
             setVisible(false);
         });
@@ -71,7 +71,7 @@ public class VentanaPedidosExpress extends JFrame {
                 int fila = tabla.getSelectedRow();
                 if (fila != -1) {
                     Factura factura = new Factura(clientesExpress.get(fila).getNombre(), "Express", "Motorizado", fila, fecha, clientesExpress.get(fila).getPedidos());
-                    VentanaFacturaExpress ventana = new VentanaFacturaExpress(factura, clientes, clientesExpress,meseros);
+                    VentanaFacturaExpress ventana = new VentanaFacturaExpress(factura, clientes, clientesExpress, meseros);
                     ventana.iniciar(mesas);
                     setVisible(false);
                 }

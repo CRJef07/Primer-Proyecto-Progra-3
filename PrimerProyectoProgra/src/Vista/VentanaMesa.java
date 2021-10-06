@@ -17,7 +17,6 @@ import Clases.Mesa;
 import Clases.Pedido;
 import Clases.Cliente;
 import Clases.ConjuntoMesas;
-import Vista.VentanaConjuntoMesas;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 

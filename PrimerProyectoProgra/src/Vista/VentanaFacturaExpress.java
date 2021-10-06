@@ -2,7 +2,6 @@ package Vista;
 
 import Clases.Cliente;
 import Clases.ConjuntoMesas;
-import Clases.Factura;
 import Clases.Pedido;
 import java.util.ArrayList;
 import javax.swing.JFrame;
@@ -31,12 +30,12 @@ public class VentanaFacturaExpress extends JFrame {
     private final Factura factura;
     private JButton btnRegresar;
 
-    public VentanaFacturaExpress(Factura factura, ArrayList<Cliente> clientes, ArrayList<Cliente> clientesExpress,ArrayList<String> meseros) {
+    public VentanaFacturaExpress(Factura factura, ArrayList<Cliente> clientes, ArrayList<Cliente> clientesExpress, ArrayList<String> meseros) {
         super("Factura Express ");
         this.factura = factura;
         this.clientes = clientes;
         this.clientesExpress = clientesExpress;
-        this.meseros=meseros;
+        this.meseros = meseros;
     }
 
     public void iniciar(ConjuntoMesas mesas) {
@@ -105,7 +104,7 @@ public class VentanaFacturaExpress extends JFrame {
         imagen.setIcon(imagen_icono);
 
         regresar.addActionListener((e) -> {
-            VentanaPedidosExpress vista = new VentanaPedidosExpress(clientes, clientesExpress,meseros);
+            VentanaPedidosExpress vista = new VentanaPedidosExpress(clientes, clientesExpress, meseros);
             vista.iniciar(mesas);
             setVisible(false);
         });
