@@ -96,15 +96,20 @@ public class VentanaMesa extends JFrame {
             setVisible(false);
         });
         btnCambiarMesa.addActionListener((e) -> {
-            mesasDisponibles = new ArrayList();
+            mesasDisponibles = new ArrayList();//INTEGERS
             for (int i = 0; i < 20; i++) {
                 if (mesas.getMesas().get(i).isDisponible()) {
                     mesasDisponibles.add(mesas.getMesas().get(i).getNumero() + 1);
-
                 }
             }
-            JList numeroMesa = new JList(mesasDisponibles.toArray());
-            String txtnumMesa = (JOptionPane.showInputDialog(numeroMesa));
+
+            String[] opciones = new String[mesasDisponibles.size()];
+            for (int i = 0; i < mesasDisponibles.size(); i++) {
+                opciones[i] = mesasDisponibles.get(i) + "";
+            }
+            ImageIcon icono = new ImageIcon("src/images/mesa d.png");
+            String txtnumMesa = (String) JOptionPane.showInputDialog(null, "Elija una mesa", "MESAS DISPONIBLES", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
             if (txtnumMesa != null && !txtnumMesa.equals("")) {
 
                 int contador = 0;

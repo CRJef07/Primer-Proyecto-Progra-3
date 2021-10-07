@@ -78,19 +78,22 @@ public class VentanaConjuntoMesas extends JFrame {
     public void AgregarEventos() {
         botones.get(0).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(0).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
 
                     String[] opciones = new String[meseros.size()];
                     for (int i = 0; i < meseros.size(); i++) {
                         opciones[i] = meseros.get(i);
                     }
                     ImageIcon icono = new ImageIcon("src/images/mesero.png");
-                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[2]);
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
 
-                    //String mesero = JOptionPane.showInputDialog(null, listaMeseros,"Escriba el nombre del mesero");
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -128,12 +131,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(1).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(1).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -163,7 +176,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(1), "Mesa 2", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -172,12 +184,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(2).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(2).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -207,7 +229,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(2), "Mesa 3", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -216,12 +237,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(3).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(3).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -251,7 +282,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(3), "Mesa 4", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -260,12 +290,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(4).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(4).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -295,7 +335,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(4), "Mesa 5", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -304,12 +343,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(5).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(5).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -339,8 +388,7 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
-                VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(5), "Mesa 5", clientes, clientesExpress, meseros);
+                VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(5), "Mesa 6", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
             }
@@ -348,12 +396,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(6).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(6).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -383,7 +441,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(6), "Mesa 7", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -392,12 +449,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(7).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(7).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -427,7 +494,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(7), "Mesa 8", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -436,12 +502,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(8).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(8).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -471,7 +547,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(8), "Mesa 9", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -480,12 +555,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(9).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(9).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -515,7 +600,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(9), "Mesa 10", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -524,12 +608,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(10).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(10).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -559,7 +653,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(10), "Mesa 11", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -568,12 +661,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(11).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(11).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -603,7 +706,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(11), "Mesa 12", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -612,12 +714,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(12).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(12).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -647,7 +759,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(12), "Mesa 13", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -656,12 +767,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(13).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(13).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -691,7 +812,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(13), "Mesa 14", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -700,12 +820,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(14).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(14).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -735,7 +865,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(14), "Mesa 15", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -744,12 +873,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(15).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(15).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -779,7 +918,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(15), "Mesa 16", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -788,12 +926,22 @@ public class VentanaConjuntoMesas extends JFrame {
 
         botones.get(16).addActionListener((ActionEvent e) -> {
             if (mesas.getMesas().get(16).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -823,7 +971,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(16), "Mesa 17", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -831,13 +978,24 @@ public class VentanaConjuntoMesas extends JFrame {
         });
 
         botones.get(17).addActionListener((ActionEvent e) -> {
+
             if (mesas.getMesas().get(17).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -867,7 +1025,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(17), "Mesa 18", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -875,13 +1032,24 @@ public class VentanaConjuntoMesas extends JFrame {
         });
 
         botones.get(18).addActionListener((ActionEvent e) -> {
+
             if (mesas.getMesas().get(18).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -911,7 +1079,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(18), "Mesa 19", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
@@ -919,13 +1086,24 @@ public class VentanaConjuntoMesas extends JFrame {
         });
 
         botones.get(19).addActionListener((ActionEvent e) -> {
+
             if (mesas.getMesas().get(19).isDisponible() == true) {
-                String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
+                String[] opcionesCant = new String[4];
+                for (int i = 0; i < 4; i++) {
+                    opcionesCant[i] = (i + 1) + "";
+                }
+                ImageIcon iconoCant = new ImageIcon("src/images/people32.png");
+                String cantidad = (String) JOptionPane.showInputDialog(null, "Elija la cantidad de personas", "PERSONAS EN LA MESA", JOptionPane.QUESTION_MESSAGE, iconoCant, opcionesCant, opcionesCant[0]);
+
                 if (cantidad != null) {
 
-                    JList listaMeseros = new JList(meseros.toArray());
-                    listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
@@ -955,7 +1133,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(19), "Mesa 20", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);
