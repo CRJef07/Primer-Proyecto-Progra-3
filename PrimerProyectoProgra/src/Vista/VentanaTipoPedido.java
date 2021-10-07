@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import Clases.Cliente;
 import Clases.ConjuntoMesas;
 import java.awt.Insets;
+import javax.swing.JOptionPane;
 
 public class VentanaTipoPedido extends JFrame {
 
@@ -46,10 +47,13 @@ public class VentanaTipoPedido extends JFrame {
         GridBagConstraints constraint = new GridBagConstraints();
 
         local.addActionListener((e) -> {
-            VentanaConjuntoMesas vista = new VentanaConjuntoMesas(mesas, clientes, clientesExpress, meseros);
-            vista.init();
-            setVisible(false);
-
+            if (!meseros.isEmpty()) {
+                VentanaConjuntoMesas vista = new VentanaConjuntoMesas(mesas, clientes, clientesExpress, meseros);
+                vista.init();
+                setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(null, "En este momento no tenemos meseros en el Restaurante", "ERROR", JOptionPane.ERROR_MESSAGE);
+            }
         });
         llevar.addActionListener((e) -> {
             VentanaLlevar ventana = new VentanaLlevar(clientes, clientesExpress, meseros);
