@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>5</zoom_level>
+  <zoom_level>2</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
-      <y>0</y>
-      <w>360</w>
-      <h>95</h>
+      <x>604</x>
+      <y>170</y>
+      <w>154</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>Ventana Restaurante
 --
@@ -27,10 +27,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
-      <y>135</y>
-      <w>110</w>
-      <h>95</h>
+      <x>558</x>
+      <y>290</y>
+      <w>74</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>Conjunto Mesas
 --
@@ -51,10 +51,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>605</x>
-      <y>135</y>
-      <w>265</w>
-      <h>95</h>
+      <x>688</x>
+      <y>228</y>
+      <w>110</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>Cliente
 --
@@ -77,32 +77,26 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>730</x>
-      <y>90</y>
-      <w>15</w>
-      <h>55</h>
+      <x>718</x>
+      <y>212</y>
+      <w>30</w>
+      <h>20</h>
     </coordinates>
-    <panel_attributes>lt=&lt;..</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>525</x>
-      <y>90</y>
-      <w>15</w>
-      <h>55</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;..</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;..
+m1=1..*
+
+m2=1
+
+tiene &lt;</panel_attributes>
+    <additional_attributes>130.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>680</x>
-      <y>270</y>
-      <w>105</w>
-      <h>65</h>
+      <x>652</x>
+      <y>286</y>
+      <w>50</w>
+      <h>26</h>
     </coordinates>
     <panel_attributes>Pedido
 --
@@ -117,21 +111,22 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>725</x>
-      <y>225</y>
-      <w>15</w>
-      <h>55</h>
+      <x>700</x>
+      <y>276</y>
+      <w>46</w>
+      <h>14</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1</panel_attributes>
+    <additional_attributes>10.0;50.0;210.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
-      <y>360</y>
-      <w>360</w>
-      <h>95</h>
+      <x>650</x>
+      <y>324</y>
+      <w>146</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Ventana Tipo Pedido
 --
@@ -152,10 +147,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>695</x>
-      <y>360</y>
-      <w>365</w>
-      <h>95</h>
+      <x>660</x>
+      <y>428</y>
+      <w>146</w>
+      <h>38</h>
     </coordinates>
     <panel_attributes>Ventana Pedidos Llevar
 --
@@ -175,10 +170,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>170</x>
-      <y>475</y>
-      <w>370</w>
-      <h>85</h>
+      <x>820</x>
+      <y>418</y>
+      <w>148</w>
+      <h>34</h>
     </coordinates>
     <panel_attributes>Ventaja Pedido Express
 --
@@ -197,10 +192,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>550</x>
-      <y>475</y>
-      <w>495</w>
-      <h>95</h>
+      <x>448</x>
+      <y>378</y>
+      <w>198</w>
+      <h>38</h>
     </coordinates>
     <panel_attributes>Ventana Pedidos
 --
@@ -219,31 +214,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>175</x>
-      <y>575</y>
-      <w>460</w>
-      <h>85</h>
-    </coordinates>
-    <panel_attributes>Ventana Pedido Express
---
--clientes:ArrayList&lt;Cliente&gt;
--clientesExpress:ArrayList&lt;Cliente&gt;
--pedidos:ArrayList&lt;Pedido&gt;
--meseros:ArrayList&lt;String&gt;
--regresar:JButton
---
-+ VentanaPedidoExpress(ArrayList&lt;Pedido&gt; pedidos, ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress,ArrayList&lt;String&gt; meseros)
-+iniciar(String nombre, String telefono, String ventana, ConjuntoMesas mesas):void
-+ajustarComponentes(Container container, String nombre, String telefono, String ventana, ConjuntoMesas mesas):void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>640</x>
-      <y>575</y>
-      <w>455</w>
-      <h>85</h>
+      <x>454</x>
+      <y>438</y>
+      <w>188</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Ventana Pedido Cliente
 --
@@ -261,10 +235,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>160</x>
-      <y>670</y>
-      <w>125</w>
-      <h>95</h>
+      <x>294</x>
+      <y>300</y>
+      <w>170</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>Ventana Mesa
 --
@@ -289,10 +263,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>290</x>
-      <y>670</y>
-      <w>360</w>
-      <h>95</h>
+      <x>658</x>
+      <y>490</y>
+      <w>144</w>
+      <h>38</h>
     </coordinates>
     <panel_attributes>Ventana Menu Llevar
 --
@@ -312,10 +286,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>655</x>
-      <y>670</y>
-      <w>380</w>
-      <h>95</h>
+      <x>824</x>
+      <y>490</y>
+      <w>152</w>
+      <h>38</h>
     </coordinates>
     <panel_attributes>Ventana Menu Express
 --
@@ -334,10 +308,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>130</x>
-      <y>775</y>
-      <w>340</w>
-      <h>95</h>
+      <x>268</x>
+      <y>488</y>
+      <w>144</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Ventana Menu
 --
@@ -359,10 +333,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>475</x>
-      <y>775</y>
-      <w>340</w>
-      <h>95</h>
+      <x>664</x>
+      <y>374</y>
+      <w>136</w>
+      <h>38</h>
     </coordinates>
     <panel_attributes>Ventana Llevar
 --
@@ -381,10 +355,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>820</x>
-      <y>775</y>
-      <w>415</w>
-      <h>95</h>
+      <x>450</x>
+      <y>482</y>
+      <w>166</w>
+      <h>38</h>
     </coordinates>
     <panel_attributes>Ventana Factura Llevar
 --
@@ -405,10 +379,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>135</x>
-      <y>880</y>
-      <w>420</w>
-      <h>95</h>
+      <x>996</x>
+      <y>504</y>
+      <w>168</w>
+      <h>38</h>
     </coordinates>
     <panel_attributes>Ventana Factura Express
 --
@@ -427,10 +401,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>880</y>
-      <w>455</w>
-      <h>95</h>
+      <x>128</x>
+      <y>428</y>
+      <w>182</w>
+      <h>38</h>
     </coordinates>
     <panel_attributes>Ventana Factura
 --
@@ -449,10 +423,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1020</x>
-      <y>880</y>
-      <w>345</w>
-      <h>95</h>
+      <x>818</x>
+      <y>366</y>
+      <w>138</w>
+      <h>38</h>
     </coordinates>
     <panel_attributes>Ventana Express
 --
@@ -470,10 +444,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>130</x>
-      <y>985</y>
-      <w>370</w>
-      <h>95</h>
+      <x>378</x>
+      <y>172</y>
+      <w>148</w>
+      <h>38</h>
     </coordinates>
     <panel_attributes>Ventana Administracion
 --
@@ -494,10 +468,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>505</x>
-      <y>985</y>
-      <w>115</w>
-      <h>65</h>
+      <x>542</x>
+      <y>542</y>
+      <w>90</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>Platillo
 --
@@ -512,10 +486,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>625</x>
-      <y>985</y>
-      <w>110</w>
-      <h>95</h>
+      <x>484</x>
+      <y>296</y>
+      <w>58</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>Mesa
 --
@@ -542,10 +516,10 @@ meseros ArrayList&lt;String&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>880</x>
-      <y>985</y>
-      <w>345</w>
-      <h>95</h>
+      <x>298</x>
+      <y>580</y>
+      <w>152</w>
+      <h>58</h>
     </coordinates>
     <panel_attributes>Factura
 --
@@ -566,5 +540,390 @@ meseros ArrayList&lt;String&gt;
 +Total():int
 +Iva(int total):int</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>536</x>
+      <y>148</y>
+      <w>26</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>          
+          
+          Main</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>160</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+tiene &gt; 
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;220.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>618</x>
+      <y>212</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=</panel_attributes>
+    <additional_attributes>10.0;80.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>228</y>
+      <w>180</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>VentanaConjuntoMesas
+--
+-mesas:ConjuntoMesas;
+-botones:ArrayList&lt;JButton&gt;
+-regresar:JButton
+-clientes:ArrayList&lt;Cliente&gt; 
+-clientesExpress:ArrayList&lt;Cliente&gt; 
+-meseros:ArrayList&lt;String&gt; 
+--
++VentanaConjuntoMesas(ConjuntoMesas mesas, ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress, ArrayList&lt;String&gt; meseros)
++init():void
++ajustarComponentes(Container container):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>262</y>
+      <w>70</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=</panel_attributes>
+    <additional_attributes>330.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>538</x>
+      <y>288</y>
+      <w>24</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=</panel_attributes>
+    <additional_attributes>10.0;40.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>294</y>
+      <w>26</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=</panel_attributes>
+    <additional_attributes>10.0;30.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>668</x>
+      <y>310</y>
+      <w>28</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=2</panel_attributes>
+    <additional_attributes>120.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>644</x>
+      <y>360</y>
+      <w>10</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;90.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>686</x>
+      <y>362</y>
+      <w>56</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>260.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>794</x>
+      <y>362</y>
+      <w>32</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>410</y>
+      <w>20</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>80.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>816</x>
+      <y>402</y>
+      <w>8</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>20.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>446</x>
+      <y>350</y>
+      <w>22</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;140.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>402</x>
+      <y>378</y>
+      <w>50</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;550.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>352</y>
+      <w>20</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>80.0;380.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>352</y>
+      <w>40</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;680.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>886</x>
+      <y>450</y>
+      <w>10</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;200.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>966</x>
+      <y>450</y>
+      <w>36</w>
+      <h>58</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>160.0;270.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>426</y>
+      <w>24</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;60.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>698</x>
+      <y>464</y>
+      <w>16</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;130.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>472</y>
+      <w>34</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;50.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>526</y>
+      <w>32</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>526</y>
+      <w>198</w>
+      <h>46</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>970.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>534</y>
+      <w>136</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;660.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>178</x>
+      <y>464</y>
+      <w>124</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+tiene &lt;</panel_attributes>
+    <additional_attributes>600.0;580.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>518</y>
+      <w>8</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>538</y>
+      <w>552</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>2740.0;10.0;10.0;490.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>524</x>
+      <y>206</y>
+      <w>84</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+administra to &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;400.0;40.0</additional_attributes>
   </element>
 </diagram>

@@ -12,7 +12,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-import Vista.VentanaMesa;
 import Clases.Cliente;
 import Clases.ConjuntoMesas;
 import javax.swing.JList;
