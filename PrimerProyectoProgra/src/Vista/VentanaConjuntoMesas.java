@@ -82,7 +82,15 @@ public class VentanaConjuntoMesas extends JFrame {
                 if (cantidad != null) {
                     JList listaMeseros = new JList(meseros.toArray());
                     listaMeseros.setEnabled(false);
-                    String mesero = JOptionPane.showInputDialog(null, listaMeseros);
+
+                    String[] opciones = new String[meseros.size()];
+                    for (int i = 0; i < meseros.size(); i++) {
+                        opciones[i] = meseros.get(i);
+                    }
+                    ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                    String mesero = (String) JOptionPane.showInputDialog(null, "Elija un mesero", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[2]);
+
+                    //String mesero = JOptionPane.showInputDialog(null, listaMeseros,"Escriba el nombre del mesero");
                     int cant = 0;
                     int contador = 0;
                     for (int i = 0; i < cantidad.length(); i++) {
