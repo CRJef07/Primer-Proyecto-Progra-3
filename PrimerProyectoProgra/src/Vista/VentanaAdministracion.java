@@ -8,6 +8,7 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JList;
@@ -44,9 +45,17 @@ public class VentanaAdministracion extends JFrame {
             }
 
         });
-        btnEliminarMeseros.addActionListener((e) -> {
-            String mesero = JOptionPane.showInputDialog("Digite el nombre del mesero que desee eliminar");
 
+        btnEliminarMeseros.addActionListener((e) -> {
+
+            String[] opciones = new String[meseros.size()];
+            for (int i = 0; i < meseros.size(); i++) {
+                opciones[i] = meseros.get(i);
+            }
+            ImageIcon icono = new ImageIcon("src/images/mesero.png");
+            String mesero = (String) JOptionPane.showInputDialog(null, "Elija el mesero que desea eliminar", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+
+            //String mesero = JOptionPane.showInputDialog("Digite el nombre del mesero que desee eliminar");
             for (String i : meseros) {
                 if (i.equals(mesero)) {
                     meseros.remove(i);
@@ -93,6 +102,7 @@ public class VentanaAdministracion extends JFrame {
 
     public void init(ConjuntoMesas mesas) {
         setSize(500, 500);
+        setResizable(false);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         ajustarComponentes(getContentPane(), mesas);

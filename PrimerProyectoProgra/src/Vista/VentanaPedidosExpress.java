@@ -32,7 +32,7 @@ public class VentanaPedidosExpress extends JFrame {
     }
 
     public void iniciar(ConjuntoMesas mesas) {
-        setSize(600, 600);
+        setSize(550, 550);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         ajustarComponentes(getContentPane(), mesas);
@@ -74,6 +74,8 @@ public class VentanaPedidosExpress extends JFrame {
                     VentanaFacturaExpress ventana = new VentanaFacturaExpress(factura, clientes, clientesExpress, meseros);
                     ventana.iniciar(mesas);
                     setVisible(false);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Debe seleccionar un cliente", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });

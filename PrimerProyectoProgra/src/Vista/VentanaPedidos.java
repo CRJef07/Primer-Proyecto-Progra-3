@@ -36,7 +36,7 @@ public class VentanaPedidos extends JFrame {
     }
 
     public void init(ConjuntoMesas mesas, String ventana) {
-        setSize(600, 600);
+        setSize(550, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         ajustarComponentes(getContentPane(), mesas, ventana);

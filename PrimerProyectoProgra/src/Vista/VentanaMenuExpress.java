@@ -27,6 +27,7 @@ public class VentanaMenuExpress extends JFrame {
     private ArrayList<String> meseros;
     private Platillo platillo_seleccionado;
     private boolean aceptado;
+    private boolean agregado;
 
     public VentanaMenuExpress(ArrayList<Cliente> clientes, ArrayList<Cliente> clientesExpress, ArrayList<String> meseros) {
         super("Ventana Menu Express");
@@ -138,35 +139,45 @@ public class VentanaMenuExpress extends JFrame {
             }
             if (contador == txt1.getText().length()) {
                 if (platillo_seleccionado == null || txt1.getText().equals("")) {
-                    JOptionPane.showMessageDialog(null, "Debe seleccionar un platillo y digitar una cantidad");
+                    JOptionPane.showMessageDialog(null, "Debe seleccionar un platillo y digitar una cantidad", "ERROR", JOptionPane.ERROR_MESSAGE);
                 } else {
                     Pedido pedido = new Pedido(Integer.parseInt(txt1.getText()), platillo_seleccionado);
                     pedidos.add(pedido);
-                    JOptionPane.showMessageDialog(null, "Recuerde darle click en 'aceptar pedido'");
+                    JOptionPane.showMessageDialog(null, "Recuerde  darle click en 'aceptar pedido'");
+                    agregado = true;
                 }
             }
         });
 
         btn_ver_pedidos.addActionListener((e) -> {
-            if (aceptado == false) {
-                JOptionPane.showMessageDialog(null, "No hay pedidos", "No ha agregado ninguna orden", JOptionPane.ERROR_MESSAGE);
-            }
-            for (int i = 0; i < clientesExpress.size(); i++) {
-                if (clientesExpress.get(i).getNombre().equals(nombre)) {
-                    VentanaPedidoExpress vista = new VentanaPedidoExpress(clientesExpress.get(i).getPedidos(), clientes, clientesExpress, meseros);
-                    vista.iniciar(nombre, telefono, "express", mesas);
-                    setVisible(false);
+            if (pedidos.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "No hay pedidos", "ERROR", JOptionPane.ERROR_MESSAGE);
+            } else {
+                if (agregado == true && aceptado == false) {
+                    JOptionPane.showMessageDialog(null, "Debe aceptar el pedido", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+                for (int i = 0; i < clientesExpress.size(); i++) {
+                    if (clientesExpress.get(i).getNombre().equals(nombre)) {
+                        VentanaPedidoExpress vista = new VentanaPedidoExpress(clientesExpress.get(i).getPedidos(), clientes, clientesExpress, meseros);
+                        vista.iniciar(nombre, telefono, "express", mesas);
+                        setVisible(false);
+                    }
                 }
             }
         });
 
         btn_aceptar.addActionListener((e) -> {
-            if (pedidos.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "No hay pedidos", "No ha agregado ninguna orden", JOptionPane.ERROR_MESSAGE);
+            if (agregado == true) {
+                if (pedidos.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "No hay pedidos", "ERROR", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    Cliente cliente = new Cliente(nombre, direccion, telefono, pedidos);
+                    clientesExpress.add(cliente);
+                    aceptado = true;
+                    JOptionPane.showMessageDialog(null, "Pedido aceptado");
+                }
             } else {
-                Cliente cliente = new Cliente(nombre, direccion, telefono, pedidos);
-                clientesExpress.add(cliente);
-                aceptado = true;
+                JOptionPane.showMessageDialog(null, "Debe agregar un pedido", "ERROR", JOptionPane.ERROR_MESSAGE);
             }
         });
 
