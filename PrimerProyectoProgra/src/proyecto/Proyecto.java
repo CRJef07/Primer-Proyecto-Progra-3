@@ -62,6 +62,6 @@ public class Proyecto {
         meseros.add("Ramses");
         meseros.add("Hillary");
         VentanaRestaurante vista = new VentanaRestaurante(clientes, clientesExpress, meseros);
-        vista.init(mesas);
+        vista.init(mesas);        
     }
 }
