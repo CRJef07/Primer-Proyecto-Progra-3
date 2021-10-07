@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>0</y>
+      <w>360</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Restaurante
+--
+- btnAdmi: JButton
+-btnMesero:JButton
+-nombreRestaurante:JLabel
+-clientes: ArrayList&lt;Cliente&gt;
+-clientesExpress: ArrayList&lt;Cliente&gt;
+-meseros: ArrayList&lt;String&gt;
+-pnlPrincipal: JPanel
+--
++VentanaRestaurante(ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress, ArrayList&lt;String&gt; meseros)
++ajustarComponentes(Container c, ConjuntoMesas mesas):void
++init(ConjuntoMesas mesas):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>135</y>
+      <w>110</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Conjunto Mesas
+--
+-mesas: ArrayList&lt;Mesa&gt;
+-cantidad_de_mesas: int
+-max_cantidad_mesas: final int
+--
++ConjuntoMesas()
++AgregarMesa(Mesa mesa):void
++EliminarMesa(int index):void
++ObtenerMesa(int index):Mesa
++getMesas():ArrayList&lt;Mesa&gt;
++getCantidad_de_mesas():int
++getMax_cantidad_mesas():int
++setCantidad_de_mesas(int cantidad_de_mesas):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>605</x>
+      <y>135</y>
+      <w>265</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Cliente
+--
+-pedidos:ArrayList&lt;Pedido&gt;
+-nombre: String
+-direccion: String
+-numero: String
+--
++Cliente(String nombre, String direccion, String numero, ArrayList&lt;Pedido&gt; pedidos)
++setPedidos(ArrayList&lt;Pedido&gt; pedidos): void
++setNombre(String nombre):void
++setDireccion(String direccion):void
++setNumero(String numero):void
++getPedidos():ArrayList&lt;Pedido&gt;
++getNombre():String
++getDireccion():String
++getNumero():String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>90</y>
+      <w>15</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>525</x>
+      <y>90</y>
+      <w>15</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>270</y>
+      <w>105</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>Pedido
+--
+-cantidad: int
+-detalle: Platillo
+--
++Pedido(int cantidad, Platillo detalle)
++getCantidad():int
++getDetalle(): Platillo</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>725</x>
+      <y>225</y>
+      <w>15</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>360</y>
+      <w>360</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Tipo Pedido
+--
+- loca:JButton
+- llevar:JButton
+- express:JButton
+- regresar:JButton
+- clientes:ArrayList&lt;Cliente&gt; 
+- clientesExpress:ArrayList&lt;Cliente&gt; 
+- meseros:ArrayList&lt;String&gt; 
+--
++VentanaTipoPedido(ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress, ArrayList&lt;String&gt; meseros)
++init(ConjuntoMesas mesas):void
++ AjustarComponentes(Container container, ConjuntoMesas mesas):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>695</x>
+      <y>360</y>
+      <w>365</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Pedidos Llevar
+--
+-clientes:ArrayList&lt;Cliente&gt; 
+-clientesExpress:ArrayList&lt;Cliente&gt; 
+-meseros:ArrayList&lt;String&gt; 
+-regresar:JButton
+-mostrarCliente:JButton
+--
++VentanaPedidosLlevar(ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress, ArrayList&lt;String&gt; meseros)
++init(ConjuntoMesas mesas):void
++ajustarComponentes(Container c, ConjuntoMesas mesas):void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>475</y>
+      <w>370</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>Ventaja Pedido Express
+--
+-clientes:ArrayList&lt;Cliente&gt;
+-clientesExpress:ArrayList&lt;Cliente&gt;
+-meseros:ArrayList&lt;String&gt;
+-btnRegresar:JButton 
+-btnMostrarCliente:JButton
+--
++VentanaPedidosExpress(ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress,ArrayList&lt;String&gt; meseros)
++iniciar(ConjuntoMesas mesas):void
++ajustarComponentes(Container container, ConjuntoMesas mesas):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>475</y>
+      <w>495</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Pedidos
+--
+-pedidos:ArrayList&lt;Pedido&gt;
+-clientes:ArrayList&lt;Cliente&gt;
+-clientesExpress:ArrayList&lt;Cliente&gt;
+-meseros:ArrayList&lt;String&gt;
+-numero_mesa:int
+-regresar:JButton 
+--
++VentanaPedidos(ArrayList&lt;Pedido&gt; pedidos, int numero_mesa, ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress, ArrayList&lt;String&gt; meseros)
++init(ConjuntoMesas mesas, String ventana):void
++ajustarComponentes(Container container, ConjuntoMesas mesas, String ventana):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>175</x>
+      <y>575</y>
+      <w>460</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>Ventana Pedido Express
+--
+-clientes:ArrayList&lt;Cliente&gt;
+-clientesExpress:ArrayList&lt;Cliente&gt;
+-pedidos:ArrayList&lt;Pedido&gt;
+-meseros:ArrayList&lt;String&gt;
+-regresar:JButton
+--
++ VentanaPedidoExpress(ArrayList&lt;Pedido&gt; pedidos, ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress,ArrayList&lt;String&gt; meseros)
++iniciar(String nombre, String telefono, String ventana, ConjuntoMesas mesas):void
++ajustarComponentes(Container container, String nombre, String telefono, String ventana, ConjuntoMesas mesas):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>575</y>
+      <w>455</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>Ventana Pedido Cliente
+--
+-clientes: ArrayList&lt;Cliente&gt;
+-clientesExpress: ArrayList&lt;Cliente&gt;
+-pedidos: ArrayList&lt;Pedido&gt;
+-regresar;
+meseros ArrayList&lt;String&gt;
+-regresar:JButton 
+--
++VentanaPedidoCliente(ArrayList&lt;Pedido&gt; pedidos, ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress, ArrayList&lt;String&gt; meseros)
++ajustarComponentes(Container container, String nombre, String telefono, String ventana, ConjuntoMesas mesas):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>670</y>
+      <w>125</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Mesa
+--
+-clientes:ArrayList&lt;Cliente&gt; 
+- clientesExpressArrayList&lt;Cliente&gt; 
+-pedidos:ArrayList&lt;Pedido&gt;
+-meseros:ArrayList&lt;String&gt; 
+-mesasDisponibles: ArrayList&lt;Integer&gt; 
+-mesa:Mesa
+--
+-btnVerPedidos: JButton 
+-btnPagar: JButton 
+-btnVerFactura: JButton 
+-btnRegresar: JButton 
+-btnCambiarMesa: JButton 
+--
++VentanaMesa(Mesa mesa, String titulo, ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress, ArrayList&lt;String&gt; meseros)
++ init(ConjuntoMesas mesas):void
++ajustarComponentes(Container container, ConjuntoMesas mesas):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>670</y>
+      <w>360</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Menu Llevar
+--
+-clientes:ArrayList&lt;Cliente&gt; 
+-clientesExpress:ArrayList&lt;Cliente&gt; 
+-pedidos:ArrayList&lt;Pedido&gt;
+-meseros:ArrayList&lt;String&gt; 
+-platillo_seleccionado:Platillo 
+-aceptado:boolean 
+--
++VentanaMenuLlevar(ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress, ArrayList&lt;String&gt; meseros)
++init(String nombre, String telefono, ConjuntoMesas mesas):void
++ AjustarComponentes(Container container, String nombre, String telefono, ConjuntoMesas mesas):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>655</x>
+      <y>670</y>
+      <w>380</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Menu Express
+--
+-clientes: ArrayList&lt;Cliente&gt; 
+-clientesExpress: ArrayList&lt;Cliente&gt; 
+-pedidos: ArrayList&lt;Pedido&gt;
+-meseros: ArrayList&lt;String&gt; 
+-platillo_seleccionado: Platillo 
+-aceptado: boolean 
+--
++VentanaMenuExpress(ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress,ArrayList&lt;String&gt; meseros)
++iniciar(String nombre, String telefono, String direccion, ConjuntoMesas mesas):void
++ajustarComponentes(Container container, String nombre, String telefono, String direccion, ConjuntoMesas mesas):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>775</y>
+      <w>340</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Menu
+--
+-numero_mesa: int 
+-pedidos: ArrayList&lt;Pedido&gt; 
+-platillo_seleccionado: Platillo 
+-clientes: ArrayList&lt;Cliente&gt; 
+-clientesExpress: ArrayList&lt;Cliente&gt; 
+-meseros: ArrayList&lt;String&gt; 
+--
++VentanaMenu(ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress, ArrayList&lt;String&gt; meseros)
++init(ConjuntoMesas mesas):void
++ AjustarComponentes(Container container, ConjuntoMesas mesas):void
++setMesa(int numero_mesa):void
++setPlatillo(Platillo platillo):void
++setPedidos(ArrayList&lt;Pedido&gt; pedidos):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>475</x>
+      <y>775</y>
+      <w>340</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Llevar
+--
+-btnVerPedidos: JButton  
+-btnAgregar: JButton  
+-btnRegresar: JButton 
+-clientes:ArrayList&lt;Cliente&gt;
+-clientesExpress:ArrayList&lt;Cliente&gt;
+.meseros ArrayList&lt;String&gt; 
+--
++VentanaLlevar(ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress, ArrayList&lt;String&gt; meseros)
++ajustarComponentes(Container c, ConjuntoMesas mesas):void
++init(ConjuntoMesas mesas):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>820</x>
+      <y>775</y>
+      <w>415</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Factura Llevar
+--
+-clientesArrayList&lt;Cliente&gt; 
+-clientesExpress:ArrayList&lt;Cliente&gt; 
+-pedidos: ArrayList&lt;Pedido&gt; 
+-meseros: ArrayList&lt;String&gt; 
+-factura: Factura 
+--
++VentanaFacturaLlevar(Factura factura, ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress,ArrayList&lt;String&gt; meseros)
++init(ConjuntoMesas mesas):void
++ajustarComponentes(Container container, ConjuntoMesas mesas):void
++
+-- Resp1
+*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>135</x>
+      <y>880</y>
+      <w>420</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Factura Express
+--
+-clientes: ArrayList&lt;Cliente&gt; 
+-clientesExpress: ArrayList&lt;Cliente&gt; 
+- pedidos: ArrayList&lt;Pedido&gt;
+-meseros: ArrayList&lt;String&gt;
+-factura: Factura 
+-btnRegresar: JButton 
+--
++VentanaFacturaExpress(Factura factura, ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress,ArrayList&lt;String&gt; meseros)
++iniciar(ConjuntoMesas mesas):void
++ ajustarComponentes(Container container, ConjuntoMesas mesas):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>880</y>
+      <w>455</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Factura
+--
+-pedidos: ArrayList&lt;Pedido&gt; 
+-clientes: ArrayList&lt;Cliente&gt; 
+-clientesExpress ArrayList&lt;Cliente&gt; 
+-meseros ArrayList&lt;String&gt; 
+-factura: Factura 
+-numero_mesa:int
+--
++VentanaFactura(Factura factura, int numero_mesa, ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress,ArrayList&lt;String&gt; meseros)
++init(ConjuntoMesas mesas, String ventana):void
++ajustarComponentes(Container container, ConjuntoMesas mesas, String ventana):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1020</x>
+      <y>880</y>
+      <w>345</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Express
+--
+-clientes: ArrayList&lt;Cliente&gt; 
+-clientesExpress: ArrayList&lt;Cliente&gt; 
+-meseros: ArrayList&lt;String&gt; 
+-btnVerPedidos: JButton 
+-btnAgregar: JButton 
+--
++VentanaExpress(ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress,ArrayList&lt;String&gt; meseros)
++iniciar(ConjuntoMesas mesas):void
++ajustarComponentes(Container container, ConjuntoMesas mesas):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>985</y>
+      <w>370</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Ventana Administracion
+--
+-btnAgregarMeseros: JButton 
+-btnEliminarMeseros: JButton 
+-btnVerMeseros JButton 
+-btnRegresar JButton 
+-clientes: ArrayList&lt;Cliente&gt; 
+-clientesExpress: ArrayList&lt;Cliente&gt; 
+-meseros: ArrayList&lt;String&gt; 
+--
++ VentanaAdministracion(ArrayList&lt;Cliente&gt; clientes, ArrayList&lt;Cliente&gt; clientesExpress, ArrayList&lt;String&gt; meseros)
++ ajustarComponentes(Container c, ConjuntoMesas mesas):void
++init(ConjuntoMesas mesas):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>505</x>
+      <y>985</y>
+      <w>115</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>Platillo
+--
+-nombre:String
+-precio:int
+--
++Platillo(String nombre, int precio)
++getNombre():String
++getPrecio():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>625</x>
+      <y>985</y>
+      <w>110</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Mesa
+--
+-pedidos: ArrayList&lt;Pedido&gt;
+-comensales:int   
+-disponible: boolean   
+-numero:int
+-mesero:String
+--
++Mesa()
++setNumero(int numero):void
++getNumero():int
++InsertarPedido(Pedido p):void
++getComensales():int
++isDisponible():boolean
++getPedidos():ArrayList&lt;Pedido&gt;
++ setComensales(int n):void
++setDisponibilidad(boolean n):void
++setPedidos(ArrayList&lt;Pedido&gt; pedidos):void
++getMesero():String
++setMesero(String mesero):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>985</y>
+      <w>345</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Factura
+--
+-nombre: String 
+-servicio: String 
+-mesero: String 
+-numero:int
+-fecha: String 
+-pedidos ArrayList&lt;Pedido&gt; 
+--
++Factura(String nombre, String servicio, String mesero, int numero, String fecha, ArrayList&lt;Pedido&gt; pedidos)
++getPedidos():ArrayList&lt;Pedido&gt;
++getNombre():String
++getServicio():String
++getMesero():String
++getNumero():int
++getFecha():String
++Total():int
++Iva(int total):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
