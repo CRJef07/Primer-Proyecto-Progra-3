@@ -81,7 +81,6 @@ public class VentanaConjuntoMesas extends JFrame {
             if (mesas.getMesas().get(0).isDisponible() == true) {
                 String cantidad = JOptionPane.showInputDialog(null, "Digite la cantidad de personas (debe ser entre 1 - 4)");
                 if (cantidad != null) {
-
                     JList listaMeseros = new JList(meseros.toArray());
                     listaMeseros.setEnabled(false);
                     String mesero = JOptionPane.showInputDialog(null, listaMeseros);
@@ -92,7 +91,6 @@ public class VentanaConjuntoMesas extends JFrame {
                             contador++;
                         }
                     }
-
                     boolean meseroValido = false;
                     if (mesero != null) {
                         for (int i = 0; i < meseros.size(); i++) {
@@ -115,7 +113,6 @@ public class VentanaConjuntoMesas extends JFrame {
                     }
                 }
             } else {
-
                 VentanaMesa vista = new VentanaMesa(mesas.getMesas().get(0), "Mesa 1", clientes, clientesExpress, meseros);
                 vista.init(mesas);
                 setVisible(false);

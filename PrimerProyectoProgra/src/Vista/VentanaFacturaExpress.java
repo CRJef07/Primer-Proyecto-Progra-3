@@ -74,7 +74,7 @@ public class VentanaFacturaExpress extends JFrame {
         JLabel iva = new JLabel("IVA: " + factura.Iva(factura.Total()));
         JLabel total_iva = new JLabel("Total IVA: " + (factura.Total() + factura.Iva(factura.Total())));
 
-        JButton regresar = new JButton("Regresar");
+        btnRegresar = new JButton("Regresar");
 
         nombre.setFont(calibri);
         servicio.setFont(calibri);
@@ -103,7 +103,7 @@ public class VentanaFacturaExpress extends JFrame {
         ImageIcon imagen_icono = new ImageIcon("src/images/restaurante.png");
         imagen.setIcon(imagen_icono);
 
-        regresar.addActionListener((e) -> {
+        btnRegresar.addActionListener((e) -> {
             VentanaPedidosExpress vista = new VentanaPedidosExpress(clientes, clientesExpress, meseros);
             vista.iniciar(mesas);
             setVisible(false);
@@ -130,7 +130,7 @@ public class VentanaFacturaExpress extends JFrame {
         subpanel3.add(iva);
         subpanel3.add(total_iva);
 
-        panel_boton.add(regresar);
+        panel_boton.add(btnRegresar);
 
         constraint.gridx = 0;
         constraint.gridy = 0;

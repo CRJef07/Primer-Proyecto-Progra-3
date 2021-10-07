@@ -17,6 +17,8 @@ import Clases.Mesa;
 import Clases.Pedido;
 import Clases.Cliente;
 import Clases.ConjuntoMesas;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 
@@ -78,7 +80,8 @@ public class VentanaMesa extends JFrame {
         });
 
         btnVerFactura.addActionListener((e) -> {
-            Factura factura = new Factura("Mesa", "Local", mesa.getMesero(), (mesa.getNumero() + 1), "29/09/2021", pedidos);
+            String fecha = new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTime());
+            Factura factura = new Factura("Mesa", "Local", mesa.getMesero(), (mesa.getNumero() + 1), fecha, pedidos);
             VentanaFactura vista = new VentanaFactura(factura, mesa.getNumero(), clientes, clientesExpress, meseros);
             vista.init(mesas, "Mesa");
             setVisible(false);
