@@ -33,6 +33,7 @@ public class VentanaPedidosLlevar extends JFrame {
 
     public void init(ConjuntoMesas mesas) {
         setSize(550, 550);
+        setResizable(false);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         ajustarComponentes(getContentPane(), mesas);

@@ -43,27 +43,26 @@ public class VentanaAdministracion extends JFrame {
                 meseros.add(mesero);
                 JOptionPane.showMessageDialog(null, "El mesero se ha agregado con exito");
             }
-
         });
 
         btnEliminarMeseros.addActionListener((e) -> {
-
-            String[] opciones = new String[meseros.size()];
-            for (int i = 0; i < meseros.size(); i++) {
-                opciones[i] = meseros.get(i);
-            }
-            ImageIcon icono = new ImageIcon("src/images/mesero.png");
-            String mesero = (String) JOptionPane.showInputDialog(null, "Elija el mesero que desea eliminar", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
-
-            //String mesero = JOptionPane.showInputDialog("Digite el nombre del mesero que desee eliminar");
-            for (String i : meseros) {
-                if (i.equals(mesero)) {
-                    meseros.remove(i);
-                    JOptionPane.showMessageDialog(null, "El mesero se ha eliminado con exito");
-                    break;
+            if (!meseros.isEmpty()) {
+                String[] opciones = new String[meseros.size()];
+                for (int i = 0; i < meseros.size(); i++) {
+                    opciones[i] = meseros.get(i);
                 }
+                ImageIcon icono = new ImageIcon("src/images/mesero.png");
+                String mesero = (String) JOptionPane.showInputDialog(null, "Elija el mesero que desea eliminar", "MESEROS", JOptionPane.QUESTION_MESSAGE, icono, opciones, opciones[0]);
+                for (String i : meseros) {
+                    if (i.equals(mesero)) {
+                        meseros.remove(i);
+                        JOptionPane.showMessageDialog(null, "El mesero se ha eliminado con exito");
+                        break;
+                    }
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "No hay meseros registrados");
             }
-
         });
         btnVerMeseros.addActionListener((e) -> {
             JList listaMeseros = new JList(meseros.toArray());

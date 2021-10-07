@@ -37,7 +37,7 @@ public class VentanaRestaurante extends JFrame {
     }
 
     public void ajustarComponentes(Container c, ConjuntoMesas mesas) {
-        fondo = new JLabel("PRUEBA");
+        fondo = new JLabel("");
         ImageIcon icono = new ImageIcon("src/images/fondo.png");
         fondo.setIcon(icono);
 

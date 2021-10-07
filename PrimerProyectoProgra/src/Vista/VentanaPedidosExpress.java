@@ -33,6 +33,7 @@ public class VentanaPedidosExpress extends JFrame {
 
     public void iniciar(ConjuntoMesas mesas) {
         setSize(550, 550);
+        setResizable(false);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         ajustarComponentes(getContentPane(), mesas);

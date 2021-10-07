@@ -75,6 +75,7 @@ public class VentanaLlevar extends JFrame {
 
     public void init(ConjuntoMesas mesas) {
         setSize(500, 500);
+        setResizable(false);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         ajustarComponentes(getContentPane(), mesas);

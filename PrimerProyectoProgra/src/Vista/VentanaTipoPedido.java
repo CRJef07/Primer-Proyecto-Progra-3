@@ -37,6 +37,7 @@ public class VentanaTipoPedido extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         AjustarComponentes(getContentPane(), mesas);
+        setResizable(false);
         setVisible(true);
     }
 
